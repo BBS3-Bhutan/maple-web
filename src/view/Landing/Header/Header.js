@@ -77,7 +77,7 @@ export default function Header(props) {
 
   return (
     <Box sx={{display: 'flex'}}>
-      <AppBar sx={{backgroundColor: '#fff', }} component="nav">
+      <AppBar sx={{backgroundColor: '#fff', boxShadow: '1px 1px 28px 6px rgba(232,232,232,0.44)' }} component="nav">
         <Container>
           <Toolbar>
             <IconButton
