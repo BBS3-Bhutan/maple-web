@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {ThemeProvider} from '@mui/material/styles';
+import {theme} from './Theme';
+import {DispatchContext, StateContext} from './store';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {routes} from './routes/Routes';
+import Home from './view/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <DispatchContext.Provider>
+        <StateContext.Provider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />}>
+                {routes.length > 0 && routes.map((route, index) => (
+                  <Route
+                    key={index}
+                    element={route.component}
+                    path={route.path}
+                  />
+                ))}
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </StateContext.Provider>
+      </DispatchContext.Provider>
+    </ThemeProvider>
   );
 }
 
