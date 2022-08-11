@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Container, Grid, Paper, Stack} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import {Images} from '../../../common/Assets/Images';
+import {useLocation} from 'react-router-dom';
 
 const bgPaper = {
   width: 300,
@@ -29,18 +30,24 @@ const serviceImage = {
 };
 
 export default function OurServicePage() {
+  const {pathname} = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth', left: 0});
+  }, [pathname]);
+
   return (
     <div>
       <Container>
-        <Stack sx={{width: 50, height: 4, backgroundColor: '#0673F2', borderRadius: 20, mb: 1, mt: 4}} />
+        <Stack sx={{width: 50, height: 4, backgroundColor: '#0673F2', borderRadius: 20, mb: 1, mt: 4}}/>
         <Typography sx={{fontSize: {md: 30, xs: 20}, color: '#575656'}} fontWeight={500}>We Offer A Wide Range
           Of</Typography>
         <Typography sx={{fontSize: {md: 38, xs: 25}, mt: -1}} fontWeight={700}>Cleaning Services</Typography>
         <Grid container sx={{mt: 6}}>
           <Grid item md={5} xs={12} sx={{...containerRelative}}>
-            <Paper sx={{...bgPaper}} />
+            <Paper sx={{...bgPaper}}/>
             <Stack sx={{...serviceImage}}>
-              <img draggable={'false'} width={300} height={250} src={Images.homeCleaning} alt="home cleaning" />
+              <img draggable={'false'} width={300} height={250} src={Images.homeCleaning} alt="home cleaning"/>
             </Stack>
           </Grid>
           <Grid item md={7} xs={12}>
@@ -56,12 +63,12 @@ export default function OurServicePage() {
               Services included in Home Cleaning
             </Typography>
             <Stack flexDirection={'row'} sx={{my: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>Cleaning rooms, kitchen, bathroom, vacuuming,
                 and dusting</Typography>
             </Stack>
             <Stack flexDirection={'row'}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>Additionally we offer add-ons like washing,
                 ironing, tidying, deep cleaning,
                 etc.</Typography>
@@ -70,9 +77,9 @@ export default function OurServicePage() {
         </Grid>
         <Grid container sx={{mt: 6}}>
           <Grid item md={5} xs={12} sx={{...containerRelative}}>
-            <Paper sx={{...bgPaper}} />
+            <Paper sx={{...bgPaper}}/>
             <Stack sx={{...serviceImage}}>
-              <img draggable={'false'} width={300} height={250} src={Images.officeCleaning} alt="home cleaning" />
+              <img draggable={'false'} width={300} height={250} src={Images.officeCleaning} alt="home cleaning"/>
             </Stack>
           </Grid>
           <Grid item md={7} xs={12}>
@@ -88,26 +95,26 @@ export default function OurServicePage() {
               Services included in Commercial Office Cleaning
             </Typography>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Dry and wet mopping, scrubbing and cleaning of floors and ceiling
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Vacuuming for surface dust/dirt removal
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Disinfection and sanitization of high-touch areas like switchboards, door handles, taps, tables, desks,
                 keyboards, chairs, etc.,
               </Typography>
             </Stack>
             <Stack flexDirection={'row'}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Cleaning common areas, window, doors, and bathrooms
               </Typography>
@@ -116,9 +123,9 @@ export default function OurServicePage() {
         </Grid>
         <Grid container sx={{mt: 6}}>
           <Grid item md={5} xs={12} sx={{...containerRelative}}>
-            <Paper sx={{...bgPaper}} />
+            <Paper sx={{...bgPaper}}/>
             <Stack sx={{...serviceImage}}>
-              <img draggable={'false'} width={300} height={250} src={Images.moveInOut} alt="home cleaning" />
+              <img draggable={'false'} width={300} height={250} src={Images.moveInOut} alt="home cleaning"/>
             </Stack>
           </Grid>
           <Grid item md={7} xs={12}>
@@ -135,25 +142,25 @@ export default function OurServicePage() {
               Services included in Move-In/Move-out Cleaning
             </Typography>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Dusting every surface, including window frames, light fixtures, and ceiling fans
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Spot cleaning doors and door frames
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Vacuuming all floors and cleaning all wood, vinyl, tile, and other flooring
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Cleaning and sanitizing countertops, sinks, bathtubs, showers, and more
               </Typography>
@@ -162,9 +169,9 @@ export default function OurServicePage() {
         </Grid>
         <Grid container sx={{mt: 6}}>
           <Grid item md={5} xs={12} sx={{...containerRelative}}>
-            <Paper sx={{...bgPaper}} />
+            <Paper sx={{...bgPaper}}/>
             <Stack sx={{...serviceImage}}>
-              <img draggable={'false'} width={300} height={250} src={Images.stataCleaning} alt="home cleaning" />
+              <img draggable={'false'} width={300} height={250} src={Images.stataCleaning} alt="home cleaning"/>
             </Stack>
           </Grid>
           <Grid item md={7} xs={12}>
@@ -180,26 +187,26 @@ export default function OurServicePage() {
               Services included in Strata Cleaning
             </Typography>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Clearing of cobwebs in common halls and areas
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Wiping, disinfection and sanitization of high-touch points like switchboards, doorknobs, common faucets,
                 park benches, handrails, etc.
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Disposal of garbage
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Vacuuming, Carpet cleaning, and common bathroom cleaning
               </Typography>
@@ -208,9 +215,9 @@ export default function OurServicePage() {
         </Grid>
         <Grid container sx={{mt: 6}}>
           <Grid item md={5} xs={12} sx={{...containerRelative}}>
-            <Paper sx={{...bgPaper}} />
+            <Paper sx={{...bgPaper}}/>
             <Stack sx={{...serviceImage}}>
-              <img draggable={'false'} width={300} height={250} src={Images.constructionCleaning} alt="home cleaning" />
+              <img draggable={'false'} width={300} height={250} src={Images.constructionCleaning} alt="home cleaning"/>
             </Stack>
           </Grid>
           <Grid item md={7} xs={12}>
@@ -226,31 +233,31 @@ export default function OurServicePage() {
               Services included in Post-Construction Cleaning
             </Typography>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Remove dust, dirt, smudges, and scuffs from walls
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Dust all surfaces, woodwork, and fixtures, including ceiling fans
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Clean trim, baseboards, window frames, and door frames
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Remove stickers from windows and glass
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Clean window blinds, inside cabinets, and inside closets
               </Typography>
@@ -259,9 +266,9 @@ export default function OurServicePage() {
         </Grid>
         <Grid container sx={{mt: 6, mb: 6}}>
           <Grid item md={5} xs={12} sx={{...containerRelative}}>
-            <Paper sx={{...bgPaper}} />
+            <Paper sx={{...bgPaper}}/>
             <Stack sx={{...serviceImage}}>
-              <img draggable={'false'} width={300} height={250} src={Images.medicalCleaning} alt="home cleaning" />
+              <img draggable={'false'} width={300} height={250} src={Images.medicalCleaning} alt="home cleaning"/>
             </Stack>
           </Grid>
           <Grid item md={7} xs={12}>
@@ -276,31 +283,31 @@ export default function OurServicePage() {
               Services included in Medical center Cleaning
             </Typography>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Comprehensive surface vacuuming, scrubbing, and cleaning
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Bed, mattress, bed frame, footboard and rails cleaning
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 High-contact areas including phones, armchairs, doorknobs, cabinet handles, faucets
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Surface disinfection from corner to corner and sanitization of every equiptments
               </Typography>
             </Stack>
             <Stack flexDirection={'row'} sx={{mt: 1}}>
-              <CheckCircleRoundedIcon color={'primary'} />
+              <CheckCircleRoundedIcon color={'primary'}/>
               <Typography fontSize={14} color={'secondary'} sx={{ml: 1}}>
                 Deep cleaning wherever necessary
               </Typography>

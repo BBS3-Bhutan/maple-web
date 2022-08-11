@@ -13,8 +13,8 @@ export default function WhyChooseUs() {
         <Typography align={'center'} sx={{letterSpacing: 3, color: '#7C7C7C', mt: 3}}>WHY CHOOSE US</Typography>
         <Typography align={'center'} sx={{fontSize: {md: 36, xs: 26}}}>Why bees on duty?</Typography>
         <Grid container sx={{my: 4}}>
-          <Grid md={3} xs={12} />
-          <Grid md={3} sm={4} xs={12}>
+          <Grid item md={3} xs={12} />
+          <Grid item md={3} sm={4} xs={12}>
             <Stack flexDirection={'row'} alignItems={'center'}>
               <HailRoundedIcon sx={{fontSize: 30, mr: 2}} color={'primary'}/>
               <Stack flexDirection={'column'}>
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
             <Divider/>
             </Stack>
           </Hidden>
-          <Grid md={6} sm={8} xs={12}>
+          <Grid item md={6} sm={8} xs={12}>
             <Stack flexDirection={'row'} sx={{mb: 1}}>
               <CheckCircleRoundedIcon color={'primary'} sx={{mr: 2}} />
               <Typography fontSize={14}>Get free qoute for service over phone call or email</Typography>
